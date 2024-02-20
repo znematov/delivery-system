@@ -6,13 +6,79 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <TextView
+    <ImageView
+        android:id="@+id/imageView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.231"
+        app:srcCompat="@drawable/splash_ico" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="240dp"
+        android:layout_height="30dp"
+        android:fontFamily="@font/poppins_regular"
+        android:text="@string/welcome"
+        android:textColor="@color/red"
+        android:textSize="24sp"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="45dp"
+        tools:layout_editor_absoluteY="302dp" />
+
+    <TextView
+        android:id="@+id/textSign"
+        android:layout_width="240dp"
+        android:layout_height="20dp"
+        android:fontFamily="@font/poppins_bold"
+        android:text="@string/sign"
+        android:textColor="@color/grey"
+        android:textSize="16sp"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="45dp"
+        tools:layout_editor_absoluteY="345dp" />
+
+    <EditText
+        android:id="@+id/editTextTextEmailAddress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="15"
+
+        android:hint="Your user ID or Email Adrress"
+        android:inputType="textEmailAddress"
+        android:textColor="@color/grey2"
+        android:textSize="12sp"
+        android:fontFamily="@font/poppins_regular"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="45dp"
+        tools:layout_editor_absoluteY="377dp" />
+
+    <EditText
+        android:id="@+id/editTextTextPassword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:fontFamily="@font/poppins_regular"
+        android:hint="Your password"
+        android:textSize="12sp"
+        android:textColor="@color/grey2"
+        android:inputType="textPassword"
+        tools:layout_editor_absoluteX="45dp"
+        tools:layout_editor_absoluteY="424dp"
+        tools:ignore="MissingConstraints" />
+
+    <CheckBox
+        android:id="@+id/checkBox"
+        android:layout_width="85dp"
+        android:layout_height="21dp"
+        android:text="CheckBox"
+        android:hint=""
+        android:textColor="@color/grey2"
+        tools:layout_editor_absoluteX="45dp"
+        tools:layout_editor_absoluteY="478dp"
+        tools:ignore="MissingConstraints" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
