@@ -12,10 +12,9 @@ class LoginActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
 
-        val loginText = "login" //findViewById<EditText>(R.id.)
-
         val loginButton = findViewById<Button>(R.id.loginButton)
         loginButton.setOnClickListener{
+            val loginText = findViewById<EditText>(R.id.loginInput).text.toString()
             val intent = Intent(this, HomeActivity::class.java).apply {
                 putExtra("Login", loginText)
             }

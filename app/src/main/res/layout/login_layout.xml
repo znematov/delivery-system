@@ -9,6 +9,7 @@
     android:layout_height="wrap_content">
 
     <EditText
+        android:id="@+id/loginInput"
         android:fontFamily="@font/poppins_regular"
         android:elevation="5dp"
         android:layout_width="match_parent"

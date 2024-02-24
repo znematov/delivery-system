@@ -8,6 +8,6 @@ class HomeActivity : AppCompatActivity(R.layout.activity_home) {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         val login = intent.getStringExtra("Login")
-        findViewById<TextView>(R.id.textLogin).text = login
+        findViewById<TextView>(R.id.textLogin).text = "Welcome to the Home page Mr. ${login.toString()}"
     }
 }
