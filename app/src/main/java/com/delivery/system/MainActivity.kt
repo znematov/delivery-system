@@ -2,19 +2,17 @@ package com.delivery.system
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.Button
-import android.widget.Toast
+import com.delivery.system.main.ui.fragment.LoginFragment
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.login)
+        setContentView(R.layout.activity_main)
 
-        val loginButton = findViewById<Button>(R.id.loginButton)
-        loginButton.setOnClickListener{
-            val toast = Toast(this)
-            toast.setText("Logged in")
-            toast.show()
+        if (savedInstanceState == null){
+            supportFragmentManager.beginTransaction()
+                .replace(R.id.container, LoginFragment())
+                .commitNow()
         }
     }
 }
