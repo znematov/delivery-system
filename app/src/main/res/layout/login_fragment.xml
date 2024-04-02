@@ -2,7 +2,6 @@
 
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/login"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:gravity="center"
@@ -41,6 +40,7 @@
             android:layout_marginBottom="20dp">
 
             <EditText
+                android:id="@+id/login"
                 android:layout_width="match_parent"
                 android:layout_height="56dp"
                 android:autofillHints="username"
@@ -61,6 +61,7 @@
             android:layout_marginBottom="20dp">
 
             <EditText
+                android:id="@+id/password"
                 android:layout_width="match_parent"
                 android:layout_height="56dp"
                 android:autofillHints="password"
@@ -69,6 +70,27 @@
                 android:fontFamily="@font/poppins_regular"
                 android:hint="@string/password_hint"
                 android:inputType="textPassword"
+                android:padding="10dp" />
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            cardCornerRadius="8dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:layout_marginBottom="20dp">
+
+            <EditText
+                android:id="@+id/serverAddress"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:autofillHints="url"
+                android:background="@null"
+                android:elevation="5dp"
+                android:fontFamily="@font/poppins_regular"
+                android:hint="Server address"
+                android:inputType="textUri"
                 android:padding="10dp" />
 
         </androidx.cardview.widget.CardView>
