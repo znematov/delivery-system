@@ -3,6 +3,7 @@ package com.delivery.system
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.delivery.system.main.ui.fragment.LoginFragment
+import com.delivery.system.main.ui.fragment.UserFragment
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
