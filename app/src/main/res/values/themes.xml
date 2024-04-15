@@ -8,4 +8,18 @@
     <style name="Theme.DeliverySystem" parent="Base.Theme.DeliverySystem">
         <item name="fontFamily">@font/poppins_regular</item>
     </style>
+
+
+    <style name="DetailDialogTitles">
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="DetailDialogItems">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:textSize">12sp</item>
+    </style>
 </resources>

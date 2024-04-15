@@ -24,7 +24,9 @@ class UserFragment : Fragment() {
 
         recyclerView = view.findViewById(R.id.RView)
         recyclerView.layoutManager = LinearLayoutManager(context)
-        adapter = UserAdapter(users())
+        adapter = UserAdapter(users()){
+            DialogFragment().show(childFragmentManager,null)
+        }
         recyclerView.adapter = adapter
 
         return view
