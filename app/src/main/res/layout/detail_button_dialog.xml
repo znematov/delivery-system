@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="14dp"
+    android:layout_gravity="center"
+    android:layout_marginHorizontal="20dp"
+    app:cardElevation="0dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="25dp">
+
+        <TextView
+            android:id="@+id/tvDetails"
+            style="@style/DetailDialogTitles"
+            android:text="Order Details:"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvId"
+            style="@style/DetailDialogItems"
+            android:layout_marginTop="6dp"
+            android:text="Id:"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvDetails" />
+
+        <TextView
+            android:id="@+id/Id"
+            style="@style/DetailDialogItems"
+            android:text="#56ad1t"
+            android:layout_marginTop="6dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvDetails" />
+
+        <TextView
+            android:id="@+id/tvStatus"
+            style="@style/DetailDialogItems"
+            android:text="Status:"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvId" />
+
+        <TextView
+            android:id="@+id/Status"
+            style="@style/DetailDialogItems"
+            android:text="Delivery"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/Id" />
+
+        <TextView
+            android:id="@+id/tvPayment"
+            style="@style/DetailDialogItems"
+            android:text="Payment:"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvStatus" />
+
+        <TextView
+            android:id="@+id/Payment"
+            style="@style/DetailDialogItems"
+            android:text="20.00s"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/Status" />
+
+
+        <TextView
+            android:id="@+id/tvOrderDetails"
+            style="@style/DetailDialogTitles"
+            android:layout_marginTop="20dp"
+            android:text="Order Details:"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvPayment" />
+
+        <TextView
+            android:id="@+id/tvFrom"
+            style="@style/DetailDialogItems"
+            android:text="From:"
+            android:layout_marginTop="6dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvOrderDetails" />
+
+        <TextView
+            android:id="@+id/tvFromName"
+            style="@style/DetailDialogItems"
+            android:text="Madina"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvFrom" />
+
+        <TextView
+            android:id="@+id/tvFromAddress"
+            style="@style/DetailDialogItems"
+            android:text="Khujand, Street 8"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvFromName" />
+
+        <TextView
+            android:id="@+id/tvTo"
+            style="@style/DetailDialogItems"
+            android:layout_marginTop="6dp"
+            android:text="To:"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvOrderDetails" />
+
+        <TextView
+            android:id="@+id/tvToName"
+            style="@style/DetailDialogItems"
+            android:text="Anisa"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvTo" />
+
+        <TextView
+            android:id="@+id/tvToAddress"
+            style="@style/DetailDialogItems"
+            android:text="Dushanbe, Street 45"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvToName" />
+
+        <TextView
+            android:id="@+id/tvNote"
+            style="@style/DetailDialogTitles"
+            android:layout_marginTop="20dp"
+            android:text="Note:"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvFromAddress" />
+
+        <TextView
+            android:id="@+id/Note"
+            style="@style/DetailDialogItems"
+            android:layout_marginTop="6dp"
+            android:text="None"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvNote" />
+
+
+        <Button
+            android:id="@+id/DialogButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/red"
+            android:layout_marginTop="20dp"
+            android:text="Back"
+            app:layout_constraintTop_toBottomOf="@+id/Note" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>

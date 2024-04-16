@@ -9,6 +9,7 @@ import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.delivery.system.R
+import com.delivery.system.view.details.view.DeliveryDetailFragment
 import com.delivery.system.view.home.view.adapter.User
 import com.delivery.system.view.home.view.adapter.HomeAdapter
 
@@ -26,7 +27,9 @@ class HomeFragment : Fragment() {
 
         recyclerView = view.findViewById(R.id.RView)
         recyclerView.layoutManager = LinearLayoutManager(context)
-        adapter = HomeAdapter(users())
+        adapter = HomeAdapter(users()){
+            DeliveryDetailFragment().show(childFragmentManager,null)
+        }
         recyclerView.adapter = adapter
 
         return view
