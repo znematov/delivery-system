@@ -5,7 +5,7 @@ import android.view.View
 import androidx.annotation.IdRes
 import androidx.recyclerview.widget.RecyclerView
 
-abstract class BaseViewHolder<T>(protected val itemView: View) : RecyclerView.ViewHolder(itemView) {
+abstract class BaseViewHolder<T>(itemView: View) : RecyclerView.ViewHolder(itemView) {
 
     protected val context: Context by lazy {
         itemView.context
