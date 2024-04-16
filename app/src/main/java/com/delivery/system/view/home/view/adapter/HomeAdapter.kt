@@ -14,12 +14,13 @@ data class User(
     val image: Int
 )
 
-class HomeAdapter(private val item: List<User>) : BaseAdapter<HomeViewHolder>() {
+class HomeAdapter(private val item: List<User>, private val onUserClicked: () -> Unit)
+    : BaseAdapter<HomeViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): HomeViewHolder {
         val view = LayoutInflater.from(parent.context)
             .inflate(R.layout.item, parent, false)
-        return HomeViewHolder(view)
+        return HomeViewHolder(view, onUserClicked)
     }
 
     override fun onBindViewHolder(holder: HomeViewHolder, position: Int) {
