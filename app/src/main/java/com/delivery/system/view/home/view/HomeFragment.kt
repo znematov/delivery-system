@@ -1,4 +1,4 @@
-package com.delivery.system.main.ui.fragment
+package com.delivery.system.view.home.view
 
 
 import android.os.Bundle
@@ -9,22 +9,24 @@ import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.delivery.system.R
+import com.delivery.system.view.home.view.adapter.User
+import com.delivery.system.view.home.view.adapter.HomeAdapter
 
-class UserFragment : Fragment() {
+class HomeFragment : Fragment() {
 
     private lateinit var recyclerView: RecyclerView
-    private lateinit var adapter: UserAdapter
+    private lateinit var adapter: HomeAdapter
 
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        val view = inflater.inflate(R.layout.activity_main, container, false)
+        val view = inflater.inflate(R.layout.main_fragment, container, false)
 
         recyclerView = view.findViewById(R.id.RView)
         recyclerView.layoutManager = LinearLayoutManager(context)
-        adapter = UserAdapter(users())
+        adapter = HomeAdapter(users())
         recyclerView.adapter = adapter
 
         return view

@@ -1,4 +1,4 @@
-package com.delivery.system.core.ui
+package com.delivery.system.core.view
 
 import android.os.Bundle
 import android.view.View

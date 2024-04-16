@@ -1,4 +1,4 @@
-package com.delivery.system.core.ui
+package com.delivery.system.core.view
 
 import androidx.recyclerview.widget.RecyclerView
 
