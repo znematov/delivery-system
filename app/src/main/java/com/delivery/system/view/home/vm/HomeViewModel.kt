@@ -17,7 +17,7 @@ class HomeViewModel : BaseViewModel() {
     private val _openOrders = MutableLiveData<List<Order>>()
     val openOrders : LiveData<List<Order>> = _openOrders
 
-    fun getOrders(){
+    fun getOpenOrders(){
         launchIO {
             val openOrders = repository.getOpenOrders()
             _openOrders.postValue(openOrders)

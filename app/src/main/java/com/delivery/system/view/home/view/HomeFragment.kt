@@ -25,6 +25,7 @@ class HomeFragment : BaseFragment(R.layout.main_fragment) {
         }
         recyclerView.adapter = adapter
         viewModel = ViewModelProvider(this)[HomeViewModel::class.java]
+        viewModel.getOpenOrders()
     }
 
     override fun onInitObservers() {
