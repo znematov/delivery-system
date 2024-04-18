@@ -16,10 +16,11 @@ import com.delivery.system.view.login.vm.LoginViewModel
 class LoginFragment : BaseFragment(R.layout.login_fragment) {
 
     private lateinit var viewModel: LoginViewModel
+    private lateinit var loginButton : Button
 
     override fun onInitListeners() {
         super.onInitListeners()
-        findViewById<Button>(R.id.loginButton).setOnClickListener {
+        loginButton.setOnClickListener {
             val login = findViewById<TextView>(R.id.login).text.toString()
             val password = findViewById<TextView>(R.id.password).text.toString()
             viewModel.login(login,password)
@@ -52,6 +53,7 @@ class LoginFragment : BaseFragment(R.layout.login_fragment) {
 
     override fun onInitView() {
         super.onInitView()
+        loginButton = findViewById(R.id.loginButton)
         viewModel = ViewModelProvider(this)[LoginViewModel::class.java]
         viewModel.setRepository(AppSettingsRepositoryImpl(requireContext()))
     }

@@ -1,38 +1,38 @@
 package com.delivery.system.view.home.view
 
 
-import android.os.Bundle
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
-import androidx.fragment.app.Fragment
+import androidx.lifecycle.ViewModelProvider
+import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.delivery.system.R
+import com.delivery.system.core.view.BaseFragment
 import com.delivery.system.view.details.view.DeliveryDetailFragment
-import com.delivery.system.view.home.view.adapter.User
 import com.delivery.system.view.home.view.adapter.HomeAdapter
+import com.delivery.system.view.home.view.adapter.User
+import com.delivery.system.view.home.vm.HomeViewModel
 
-class HomeFragment : Fragment() {
+class HomeFragment : BaseFragment(R.layout.main_fragment) {
 
     private lateinit var recyclerView: RecyclerView
     private lateinit var adapter: HomeAdapter
+    private lateinit var viewModel: HomeViewModel
 
-    override fun onCreateView(
-        inflater: LayoutInflater,
-        container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
-        val view = inflater.inflate(R.layout.main_fragment, container, false)
-
-        recyclerView = view.findViewById(R.id.RView)
+    override fun onInitView() {
+        super.onInitView()
+        recyclerView = findViewById(R.id.RView)
         recyclerView.layoutManager = LinearLayoutManager(context)
-        adapter = HomeAdapter(users()){
+        adapter = HomeAdapter{
             DeliveryDetailFragment().show(childFragmentManager,null)
         }
         recyclerView.adapter = adapter
+        viewModel = ViewModelProvider(this)[HomeViewModel::class.java]
+    }
 
-        return view
+    override fun onInitObservers() {
+        viewModel.openOrders.observe(viewLifecycleOwner){
+            adapter.up
+        }
     }
 
     private fun users(): List<User> {
