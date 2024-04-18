@@ -4,6 +4,7 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import com.delivery.system.R
 import com.delivery.system.core.view.BaseAdapter
+import com.delivery.system.model.Order
 import com.delivery.system.view.home.view.adapter.viewholder.HomeViewHolder
 
 data class User(
@@ -13,7 +14,7 @@ data class User(
     val image: Int
 )
 
-class HomeAdapter(private val items: ArrayList<User> = ArrayList(), private val onUserClicked: () -> Unit)
+class HomeAdapter(private val items: MutableList<Order> = mutableListOf(), private val onUserClicked: () -> Unit)
     : BaseAdapter<HomeViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): HomeViewHolder {
@@ -30,9 +31,9 @@ class HomeAdapter(private val items: ArrayList<User> = ArrayList(), private val 
         return items.size
     }
 
-    fun updateItems(newItem: List<User>){
+    fun updateItems(newItems: List<Order>){
         items.clear()
-        items.addAll(newItem)
-        notifyItemInserted()
+        items.addAll(newItems)
+        notifyDataSetChanged()
     }
 }

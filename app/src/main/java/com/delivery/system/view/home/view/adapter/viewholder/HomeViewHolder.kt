@@ -6,11 +6,12 @@ import android.widget.ImageView
 import android.widget.TextView
 import com.delivery.system.R
 import com.delivery.system.core.view.BaseViewHolder
+import com.delivery.system.model.Order
 import com.delivery.system.view.home.view.adapter.User
 
 
-class HomeViewHolder(itemView: View, private val onUserClicked: () -> Unit) : BaseViewHolder<User>(itemView) {
-    override fun bind(item: User) {
+class HomeViewHolder(itemView: View, private val onUserClicked: () -> Unit) : BaseViewHolder<Order>(itemView) {
+    override fun bind(item: Order) {
         itemView.findViewById<TextView>(R.id.tvName).text = item.name
         itemView.findViewById<TextView>(R.id.tvAddress).text = item.address
         itemView.findViewById<TextView>(R.id.tvID).text = item.id

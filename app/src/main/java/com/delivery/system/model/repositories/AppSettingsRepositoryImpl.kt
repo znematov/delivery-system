@@ -1,16 +1,15 @@
 package com.delivery.system.model.repositories
 
 import android.content.Context
-import com.delivery.system.model.db.SharedPreferences
+import com.delivery.system.model.db.LocalStorage
 
-class AppSettingsRepositoryImpl(context: Context) : AppSettingsRepository {
-    private val db = SharedPreferences(context)
+class AppSettingsRepositoryImpl : AppSettingsRepository {
     override fun getToken(): String {
-        return db.get(TOKEN)
+        return LocalStorage.get(TOKEN)
     }
 
-    override fun addToken(token: String) {
-        db.save(TOKEN, token)
+    override fun setToken(token: String) {
+        LocalStorage.save(TOKEN, token)
     }
 
     companion object{

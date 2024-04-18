@@ -2,14 +2,12 @@ package com.delivery.system.view.home.view
 
 
 import androidx.lifecycle.ViewModelProvider
-import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.delivery.system.R
 import com.delivery.system.core.view.BaseFragment
 import com.delivery.system.view.details.view.DeliveryDetailFragment
 import com.delivery.system.view.home.view.adapter.HomeAdapter
-import com.delivery.system.view.home.view.adapter.User
 import com.delivery.system.view.home.vm.HomeViewModel
 
 class HomeFragment : BaseFragment(R.layout.main_fragment) {
@@ -31,11 +29,11 @@ class HomeFragment : BaseFragment(R.layout.main_fragment) {
 
     override fun onInitObservers() {
         viewModel.openOrders.observe(viewLifecycleOwner){
-            adapter.up
+            adapter.updateItems(viewModel.openOrders.value!!)
         }
     }
 
-    private fun users(): List<User> {
+    /*private fun users(): List<User> {
         val item = listOf(
             User(
                 name = "Muhammed",
@@ -58,5 +56,5 @@ class HomeFragment : BaseFragment(R.layout.main_fragment) {
         )
         return item
 
-    }
+    }*/
 }

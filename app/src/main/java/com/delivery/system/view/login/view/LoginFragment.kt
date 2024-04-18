@@ -55,6 +55,5 @@ class LoginFragment : BaseFragment(R.layout.login_fragment) {
         super.onInitView()
         loginButton = findViewById(R.id.loginButton)
         viewModel = ViewModelProvider(this)[LoginViewModel::class.java]
-        viewModel.setRepository(AppSettingsRepositoryImpl(requireContext()))
     }
 }
