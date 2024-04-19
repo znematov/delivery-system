@@ -27,7 +27,7 @@ class HomeViewHolder(itemView: View, private val onUserClicked: () -> Unit) : Ba
         }
 
         itemView.findViewById<Button>(R.id.DetailsButton).setOnClickListener {
-             onUserClicked.invoke()
+            onUserClicked.invoke()
+        }
         }
     }
-}
