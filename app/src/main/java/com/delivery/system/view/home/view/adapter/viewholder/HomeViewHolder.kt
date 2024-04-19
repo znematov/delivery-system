@@ -16,7 +16,7 @@ class HomeViewHolder(itemView: View, private val onUserClicked: () -> Unit) : Ba
         itemView.findViewById<TextView>(R.id.tvID).text = item.id
         itemView.findViewById<ImageView>(R.id.imageView).setImageResource(item.image)
         itemView.findViewById<Button>(R.id.DetailsButton).setOnClickListener {
-             onUserClicked.invoke()
+            onUserClicked.invoke()
+        }
         }
     }
-}
