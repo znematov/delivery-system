@@ -1,8 +1,10 @@
 package com.delivery.system.view.details.view
 
 import android.app.Dialog
+import android.content.Intent
 import android.graphics.Color
 import android.graphics.drawable.ColorDrawable
+import android.net.Uri
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -13,7 +15,7 @@ import android.widget.Button
 import androidx.fragment.app.DialogFragment
 import com.delivery.system.R
 
-class DeliveryDetailFragment : DialogFragment() {
+class DeliveryDetailFragment(private val address: String) : DialogFragment() {
     override fun onCreateDialog(savedInstanceState: Bundle?): Dialog {
         val dialog = super.onCreateDialog(savedInstanceState)
         dialog.setCancelable(false)
@@ -31,6 +33,12 @@ class DeliveryDetailFragment : DialogFragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         view.findViewById<Button>(R.id.DialogButton).setOnClickListener {
             dismiss()
+
+        }
+        view.findViewById<Button>(R.id.show_map_button).setOnClickListener {
+            val map = "geo:0,0?q=$address"
+            val intent = Intent(Intent.ACTION_VIEW, Uri.parse(map))
+            startActivity(intent)
         }
         super.onViewCreated(view, savedInstanceState)
     }

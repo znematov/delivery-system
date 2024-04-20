@@ -9,19 +9,19 @@ import com.delivery.system.view.home.view.HomeFragment
 import com.delivery.system.view.login.view.LoginFragment
 
 class MainActivity : AppCompatActivity() {
-    private lateinit var appSettingsRepository : AppSettingsRepository
+    private lateinit var appSettingsRepository: AppSettingsRepository
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        appSettingsRepository = AppSettingsRepositoryImpl(this)
+        appSettingsRepository = AppSettingsRepositoryImpl()
 
-        if (savedInstanceState == null){
+        if (savedInstanceState == null) {
             val token = appSettingsRepository.getToken()
-            if (token.isEmpty()){
+            if (token.isEmpty()) {
                 supportFragmentManager.beginTransaction()
                     .replace(R.id.container, LoginFragment())
                     .commitNow()
-            }else{
+            } else {
                 supportFragmentManager.beginTransaction()
                     .replace(R.id.container, HomeFragment())
                     .commitNow()

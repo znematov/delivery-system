@@ -3,13 +3,13 @@ package com.delivery.system.view.login.vm
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import com.delivery.system.core.vm.BaseViewModel
-import com.delivery.system.model.repositories.AuthenticationRepository
+import com.delivery.system.model.repositories.AuthenticationRepositoryImpl
 import com.delivery.system.model.LoginDto
 import com.delivery.system.model.repositories.AppSettingsRepository
+import com.delivery.system.model.repositories.AppSettingsRepositoryImpl
 
-class LoginViewModel : BaseViewModel()
-{
-    private var appSettingsRepository : AppSettingsRepository? = null
+class LoginViewModel : BaseViewModel() {
+    private var appSettingsRepository : AppSettingsRepository = AppSettingsRepositoryImpl()
 
     private val resultData = MutableLiveData<Boolean>()
     val loginResult : LiveData<Boolean> = resultData
@@ -17,7 +17,7 @@ class LoginViewModel : BaseViewModel()
     private val _loading:MutableLiveData<Boolean> = MutableLiveData()
     val loading:LiveData<Boolean> = _loading
 
-    private val authRepository = AuthenticationRepository()
+    private val authRepository = AuthenticationRepositoryImpl()
     fun login(login: String, password: String) {
 
         val loginDto = LoginDto(login, password)
@@ -25,13 +25,9 @@ class LoginViewModel : BaseViewModel()
             _loading.postValue(true)
             val result = authRepository.login(loginDto)
             if (result.isLoginValid)
-                appSettingsRepository!!.addToken(result.token)
+                appSettingsRepository.setToken(result.token)
             resultData.postValue(result.isLoginValid)
             _loading.postValue(false)
         }
-    }
-
-    fun setRepository(repository: AppSettingsRepository){
-        appSettingsRepository = repository
     }
 }
