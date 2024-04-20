@@ -9,7 +9,7 @@ import com.delivery.system.core.view.BaseViewHolder
 import com.delivery.system.model.Order
 
 
-class HomeViewHolder(itemView: View, private val onUserClicked: () -> Unit) : BaseViewHolder<Order>(itemView) {
+class HomeViewHolder(itemView: View, private val onUserClicked: (address: String) -> Unit) : BaseViewHolder<Order>(itemView) {
     override fun bind(item: Order) {
         itemView.findViewById<TextView>(R.id.tvName).text = item.clientName
         itemView.findViewById<TextView>(R.id.tvAddress).text = item.destinationAddress
@@ -27,7 +27,7 @@ class HomeViewHolder(itemView: View, private val onUserClicked: () -> Unit) : Ba
         }
 
         itemView.findViewById<Button>(R.id.DetailsButton).setOnClickListener {
-            onUserClicked.invoke()
+            onUserClicked.invoke(item.destinationAddress)
         }
         }
     }

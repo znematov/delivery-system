@@ -65,66 +65,13 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/Status" />
 
-
-        <TextView
-            android:id="@+id/tvOrderDetails"
-            style="@style/DetailDialogTitles"
-            android:layout_marginTop="20dp"
-            android:text="Order Details:"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tvPayment" />
-
-        <TextView
-            android:id="@+id/tvFrom"
-            style="@style/DetailDialogItems"
-            android:text="From:"
-            android:layout_marginTop="6dp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tvOrderDetails" />
-
-        <TextView
-            android:id="@+id/tvFromName"
-            style="@style/DetailDialogItems"
-            android:text="Madina"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tvFrom" />
-
-        <TextView
-            android:id="@+id/tvFromAddress"
-            style="@style/DetailDialogItems"
-            android:text="Khujand, Street 8"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tvFromName" />
-
-        <TextView
-            android:id="@+id/tvTo"
-            style="@style/DetailDialogItems"
-            android:layout_marginTop="6dp"
-            android:text="To:"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tvOrderDetails" />
-
-        <TextView
-            android:id="@+id/tvToName"
-            style="@style/DetailDialogItems"
-            android:text="Anisa"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tvTo" />
-
-        <TextView
-            android:id="@+id/tvToAddress"
-            style="@style/DetailDialogItems"
-            android:text="Dushanbe, Street 45"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tvToName" />
-
         <TextView
             android:id="@+id/tvNote"
             style="@style/DetailDialogTitles"
             android:layout_marginTop="20dp"
             android:text="Note:"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tvFromAddress" />
+            app:layout_constraintTop_toBottomOf="@+id/Status" />
 
         <TextView
             android:id="@+id/Note"
@@ -134,15 +81,21 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/tvNote" />
 
+        <Button
+            android:id="@+id/show_map_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="Show on map"
+            app:layout_constraintTop_toBottomOf="@+id/Note" />
 
         <Button
             android:id="@+id/DialogButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:backgroundTint="@color/red"
-            android:layout_marginTop="20dp"
             android:text="Back"
-            app:layout_constraintTop_toBottomOf="@+id/Note" />
+            app:layout_constraintTop_toBottomOf="@+id/show_map_button" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
