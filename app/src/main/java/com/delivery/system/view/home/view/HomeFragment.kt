@@ -9,6 +9,7 @@ import androidx.drawerlayout.widget.DrawerLayout
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import androidx.swiperefreshlayout.widget.SwipeRefreshLayout
 import com.delivery.system.R
 import com.delivery.system.core.view.BaseFragment
 import com.delivery.system.model.repositories.AppSettingsRepository
@@ -26,6 +27,7 @@ class HomeFragment : BaseFragment(R.layout.main_fragment) , NavigationView.OnNav
     private lateinit var drawerLayout: DrawerLayout
     private lateinit var toolbar: Toolbar
     private lateinit var appSettingsRepository: AppSettingsRepository
+    private lateinit var swipeRefresh : SwipeRefreshLayout
 
     override fun onInitView() {
         super.onInitView()
@@ -33,6 +35,7 @@ class HomeFragment : BaseFragment(R.layout.main_fragment) , NavigationView.OnNav
         toolbar = findViewById(R.id.toolbar)
         initToolBarAndDrawer()
         appSettingsRepository = AppSettingsRepositoryImpl()
+        swipeRefresh = findViewById(R.id.swipe_refresh)
         recyclerView = findViewById(R.id.RView)
         recyclerView.layoutManager = LinearLayoutManager(context)
         adapter = HomeAdapter{
@@ -75,6 +78,13 @@ class HomeFragment : BaseFragment(R.layout.main_fragment) , NavigationView.OnNav
     override fun onInitObservers() {
         viewModel.openOrders.observe(viewLifecycleOwner){
             adapter.updateItems(viewModel.openOrders.value!!)
+        }
+    }
+
+    override fun onInitListeners() {
+        swipeRefresh.setOnRefreshListener {
+            swipeRefresh.isRefreshing = false
+            viewModel.getOpenOrders()
         }
     }
 }
