@@ -18,8 +18,8 @@ class OrderRepositoryImpl : OrderRepository {
         return dataSource.getCompletedOrders(driverId)
     }
 
-    override suspend fun assignOrder(orderId: String, driverId: String) {
-        return dataSource.assignedOrder(orderId, driverId)
+    override suspend fun deliverOrder(orderId: String) {
+        return dataSource.deliverOrder(orderId)
     }
 
     override suspend fun completeOrder(orderId: String) {

@@ -81,19 +81,20 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/tvNote" />
 
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/show_map_button"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
+            app:icon="@drawable/ic_map"
             android:text="Show on map"
+            android:backgroundTint="@color/app_color"
             app:layout_constraintTop_toBottomOf="@+id/Note" />
 
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/DialogButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:backgroundTint="@color/red"
             android:text="Back"
             app:layout_constraintTop_toBottomOf="@+id/show_map_button" />
 

@@ -14,4 +14,7 @@
     <string name="button_deliver">Deliver</string>
     <string name="title_delivery">DELIVERY</string>
     <string name="Address">Khujand, Street 233</string>
+    
+    <string name="deliveryConditionAgreement">By signing this you are agreeing that you are receiving this delivery in good condition
+</string>
 </resources>

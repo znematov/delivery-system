@@ -16,8 +16,8 @@ interface OrderApi {
     @GET("orders/completed/{driverId}")
     suspend fun getCompletedOrders(@Path("driverId") driverId: String): List<Order>
 
-    @POST("order/assigned/{driverId}")
-    suspend fun assignedOrder(@Path("orderId") orderId: String, @Path("driverId") driverId: String)
+    @POST("order/deliver/{orderId}")
+    suspend fun deliverOrder(@Path("orderId") orderId: String)
 
     @PUT("order/complete/{orderId}")
     suspend fun completeOrder(@Path("orderId") orderId: String)
