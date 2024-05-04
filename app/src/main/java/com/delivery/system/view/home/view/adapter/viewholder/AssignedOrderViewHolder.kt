@@ -48,6 +48,7 @@ class AssignedOrderViewHolder(
         val showOnMapButton = itemView.findViewById<MaterialButton>(R.id.show_on_map_button)
         val arrivedButton = itemView.findViewById<MaterialButton>(R.id.arrived_button)
         val callToClientButton = itemView.findViewById<MaterialButton>(R.id.call_client_button)
+        val completeButton = itemView.findViewById<MaterialButton>(R.id.complete_delivery_button)
         val timerText = findById<TextView>(R.id.timer_text)
         arrivedButton.setOnClickListener {
             timerText.visibility = View.VISIBLE
@@ -60,7 +61,9 @@ class AssignedOrderViewHolder(
                 }
 
                 override fun onFinish() {
-                    TODO("Not yet implemented")
+                    completeButton.visibility = View.VISIBLE
+                    timerText.visibility = View.INVISIBLE
+                    callToClientButton.visibility = View.INVISIBLE
                 }
 
             }.start()
