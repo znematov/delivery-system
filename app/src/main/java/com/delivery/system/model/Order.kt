@@ -7,5 +7,6 @@ data class Order(
     val destinationAddress: String,
     val registeredDate: String,
     val completedDate: String?,
-    val clientName: String
+    val clientName: String,
+    val clientPhone: String
 )

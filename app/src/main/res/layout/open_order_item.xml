@@ -100,6 +100,17 @@
                 app:layout_constraintTop_toBottomOf="@+id/tvName" />
 
             <TextView
+                android:id="@+id/client_phone_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="28dp"
+                android:text="@string/Address"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toBottomOf="@+id/tvAddress"
+                app:layout_constraintStart_toEndOf="@+id/cvImage"
+                app:layout_constraintTop_toBottomOf="@+id/tvAddress" />
+
+            <TextView
                 android:id="@+id/tvID"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -107,11 +118,12 @@
                 android:textSize="12sp"
                 app:layout_constraintBottom_toBottomOf="@+id/cvImage"
                 app:layout_constraintStart_toEndOf="@+id/cvImage"
-                app:layout_constraintTop_toBottomOf="@+id/tvAddress"
+                app:layout_constraintTop_toBottomOf="@+id/client_phone_number"
                 tools:text="DLS234GT4568K" />
 
-            <Button
+            <com.google.android.material.button.MaterialButton
                 android:id="@+id/DeliverButton"
+                app:icon="@drawable/ic_shipping"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="10dp"

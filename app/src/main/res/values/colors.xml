@@ -5,7 +5,9 @@
     <color name="button_login_color">#CB1010</color>
     <color name="user_name">#FF000000</color>
     <color name="red">#CB1010</color>
+    <color name="green">#4CAF50</color>
     <color name="grey">#CAC8C8</color>
+    <color name="grey_dark">#808080</color>
     <color name="blue">#2196F3</color>
     <color name="Background">#EAEAEA</color>
     <color name="app_color">#CB1010</color>
