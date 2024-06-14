@@ -2,7 +2,7 @@ package com.delivery.system.model.repositories
 
 import com.delivery.system.model.Order
 import com.delivery.system.model.dataSource.network.NetworkClient
-import com.delivery.system.model.dataSource.network.OrderApi
+import com.delivery.system.model.dataSource.OrderApi
 
 class OrderRepositoryImpl : OrderRepository {
     private val dataSource = NetworkClient.retrofit.create(OrderApi::class.java)
