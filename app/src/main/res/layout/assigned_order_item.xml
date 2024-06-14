@@ -86,7 +86,7 @@
                 android:textSize="20sp"
                 app:layout_constraintStart_toEndOf="@+id/cvImage"
                 app:layout_constraintTop_toTopOf="@+id/cvImage"
-                tools:text="Muhammad" />
+                tools:text="Мухаммад" />
 
             <TextView
                 android:id="@+id/tvAddress"
@@ -137,7 +137,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:backgroundTint="@color/red"
-                    android:text="Show on map"
+                    android:text="Показать на карте"
                     android:textColor="@color/white"
                     app:icon="@drawable/ic_map" />
 
@@ -155,7 +155,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:backgroundTint="@color/green"
-                    android:text="Arrived"
+                    android:text="Прибыл"
                     android:textColor="@color/white"
                     app:icon="@drawable/ic_arrived"
                     app:iconGravity="start" />
@@ -164,7 +164,7 @@
                     android:id="@+id/call_client_button"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Call a client"
+                    android:text="Позвонить клиенту"
                     android:textColor="@color/white"
                     app:icon="@drawable/ic_cell_phone"
                     app:iconGravity="start"
@@ -175,7 +175,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:backgroundTint="@color/app_color"
-                    android:text="Complete"
+                    android:text="Завершить"
                     android:visibility="gone"
                     android:textColor="@color/white"
                     app:icon="@drawable/ic_done" />

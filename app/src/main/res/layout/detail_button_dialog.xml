@@ -17,7 +17,7 @@
         <TextView
             android:id="@+id/tvDetails"
             style="@style/DetailDialogTitles"
-            android:text="Order Details:"
+            android:text="Детали заказа:"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -25,7 +25,7 @@
             android:id="@+id/tvId"
             style="@style/DetailDialogItems"
             android:layout_marginTop="6dp"
-            android:text="Id:"
+            android:text="Код заказа:"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/tvDetails" />
 
@@ -40,28 +40,28 @@
         <TextView
             android:id="@+id/tvStatus"
             style="@style/DetailDialogItems"
-            android:text="Status:"
+            android:text="Статус:"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/tvId" />
 
         <TextView
             android:id="@+id/Status"
             style="@style/DetailDialogItems"
-            android:text="Delivery"
+            android:text="Доставка по адресу"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/Id" />
 
         <TextView
             android:id="@+id/tvPayment"
             style="@style/DetailDialogItems"
-            android:text="Payment:"
+            android:text="Платеж:"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/tvStatus" />
 
         <TextView
             android:id="@+id/Payment"
             style="@style/DetailDialogItems"
-            android:text="20.00s"
+            android:text="20.00c"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/Status" />
 
@@ -69,7 +69,7 @@
             android:id="@+id/tvNote"
             style="@style/DetailDialogTitles"
             android:layout_marginTop="20dp"
-            android:text="Note:"
+            android:text="Примечание:"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/Status" />
 
@@ -77,7 +77,7 @@
             android:id="@+id/Note"
             style="@style/DetailDialogItems"
             android:layout_marginTop="6dp"
-            android:text="None"
+            android:text="Отсутствует"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/tvNote" />
 
@@ -87,7 +87,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
             app:icon="@drawable/ic_map"
-            android:text="Show on map"
+            android:text="Показать на карте"
             android:backgroundTint="@color/app_color"
             app:layout_constraintTop_toBottomOf="@+id/Note" />
 
@@ -95,7 +95,7 @@
             android:id="@+id/DialogButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Back"
+            android:text="Назад"
             app:layout_constraintTop_toBottomOf="@+id/show_map_button" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>

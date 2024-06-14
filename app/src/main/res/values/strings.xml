@@ -2,19 +2,18 @@
     <string name="app_name">Delivery System</string>
     <string name="open_nav">Open Navigation Drawer</string>
     <string name="close_nav">Close Navigation Drawer</string>
-    <string name="greetings">Welcome to DS!</string>
-    <string name="enter_your_credentials_please">Enter your credentials please:</string>
-    <string name="login_hint">Login</string>
-    <string name="password_hint">Password</string>
-    <string name="login_button_text">Login</string>
+    <string name="greetings">Добро пожаловать в DS!</string>
+    <string name="enter_your_credentials_please">Введите свои учетные данные, пожалуйста:</string>
+    <string name="login_hint">Логин</string>
+    <string name="password_hint">Пароль</string>
+    <string name="login_button_text">Логин</string>
 
-    <string name="date">Jan 22, 2024</string>
-    <string name="bottom_details">Details</string>
-    <string name="button_cancel">Cancel</string>
-    <string name="button_deliver">Deliver</string>
-    <string name="title_delivery">DELIVERY</string>
-    <string name="Address">Khujand, Street 233</string>
+    <string name="date">22 января 2024 г.</string>
+    <string name="bottom_details">Детали</string>
+    <string name="button_cancel">Отмена</string>
+    <string name="button_deliver">Доставить</string>
+    <string name="title_delivery">Доставить</string>
+    <string name="Address">Худжанд, улица 233</string>
     
-    <string name="deliveryConditionAgreement">By signing this you are agreeing that you are receiving this delivery in good condition
-</string>
+    <string name="deliveryConditionAgreement">Подписывая это, вы соглашаетесь с тем, что получаете эту посылку в хорошем состоянии</string>
 </resources>
