@@ -22,7 +22,7 @@ class OpenOrdersViewHolder(itemView: View, private val orderListeners: OrderList
         itemView.findViewById<TextView>(R.id.costTextView).text = item.cost.toString() + "c"
 
         val orderTextView = itemView.findViewById<TextView>(R.id.tvOrder)
-        val text = "Order status: " + item.orderStatus.name
+        val text = "Статус заказа: " + item.orderStatus.name
         orderTextView.text = text
         when (item.orderStatus.name) {
             "DONE" -> orderTextView.setTextColor(Color.GREEN)

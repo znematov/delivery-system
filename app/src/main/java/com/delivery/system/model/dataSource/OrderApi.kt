@@ -1,4 +1,4 @@
-package com.delivery.system.model.dataSource.network
+package com.delivery.system.model.dataSource
 
 import com.delivery.system.model.Order
 import retrofit2.http.GET
